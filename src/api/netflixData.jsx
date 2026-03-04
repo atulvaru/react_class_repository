@@ -9,14 +9,14 @@ export const netflixData = [
     summary: "After the devastating events of Infinity War, the Avengers assemble once more."
   },
   {
-    id: 2,
-    name: "Inception (2010)",
-    rating: "8.8",
-    genre: "Action / Sci-Fi",
-    img: "https://image.tmdb.org/t/p/w500/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg",
-    imdb: "https://www.imdb.com/title/tt1375666/",
-    summary: "A thief who steals corporate secrets through dream-sharing technology is given an inverse task."
-  },
+  id: 2,
+  name: "Inception (2010)",
+  rating: "8.8",
+  genre: "Action / Sci-Fi",
+  img: "https://image.tmdb.org/t/p/w500/8IB2e4r4oVhHnANbnm7O3Tj6tF8.jpg",
+  imdb: "https://www.imdb.com/title/tt1375666/",
+  summary: "A thief who steals corporate secrets through dream-sharing technology is given an inverse task."
+},
   {
     id: 3,
     name: "The Dark Knight (2008)",
@@ -54,14 +54,14 @@ export const netflixData = [
     summary: "Greed and class discrimination threaten the newly formed symbiotic relationship between two families."
   },
   {
-    id: 7,
-    name: "The Matrix (1999)",
-    rating: "8.7",
-    genre: "Sci-Fi / Action",
-    img: "https://image.tmdb.org/t/p/w500/aOIuZAjPaYXOdxBXeqNJHreWz9u.jpg",
-    imdb: "https://www.imdb.com/title/tt0133093/",
-    summary: "A hacker discovers the nature of reality and his role in the war against its controllers."
-  },
+  id: 7,
+  name: "The Matrix (1999)",
+  rating: "8.7",
+  genre: "Sci-Fi / Action",
+  img: "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+  imdb: "https://www.imdb.com/title/tt0133093/",
+  summary: "A hacker discovers the nature of reality and his role in the war against its controllers."
+},
   {
     id: 8,
     name: "The Shawshank Redemption (1994)",
