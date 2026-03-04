@@ -1,42 +1,30 @@
- const Netflix = () => {
-  // 🎥 Movie Details
-  const name = "Avengers: Endgame (2019)";
-  const rating = 8.4;
-  const summary =
-    "A thrilling superhero movie filled with action and emotional moments.";
-
-  // 🎭 Genre Function
-  const getGenre = () => {
-    return "Action / Adventure";
-  };
-
-  // 👤 User Age
-  const age = 19;
-
-  // 🎯 Best Practice: Pure Function with Parameter
-  const getViewerStatus = (userAge) => {
-    if (userAge >= 18) return "🎬 Watch Now";
-    return "🚫 Not Available";
-  };
-
+import { netflixData } from "../api/netflixData";
+const Netflix = () => {
   return (
-    <div className="movie-card">
-      {/* 🖼 Movie Poster */}
-      <img src="average.avif" alt="movie-poster" />
+    <>
+      {netflixData.map((movie) => {
+        return (
+          <div key={movie.id} className="movie-card">
+            {/* 🖼 Movie Poster */}
+            <img src={movie.img} alt="movie-poster" />
 
-      <div>
-        {/* 📌 Dynamic Values in JSX */}
-        <h1>🎥 Movie Name: {name}</h1>
-        <h3>⭐ Rating: {rating}</h3>
-        <p>📝 Summary: {summary}</p>
-        <p>🎭 Genre: {getGenre()}</p>
+            <div>
+              {/* 📌 Dynamic Values in JSX */}
+              <h1>🎥 Movie Name: {movie.name}</h1>
+              <h3>⭐ Rating: {movie.rating}</h3>
+              <p>📝 Summary: {movie.summary}</p>
+              <p>🎭 Genre: {movie.genre}</p>
 
-        {/* 🔐 Conditional Rendering */}
-        <button>{getViewerStatus(age)}</button>
-      </div>
-    </div>
+              {/* 🔐 Conditional Rendering */}
+              <a href={movie.imdb} target="_blank">
+                <button>{"Watch Now"}</button>
+              </a>
+            </div>
+          </div>
+        );
+      })}
+    </>
   );
 };
-
 
 export default Netflix;

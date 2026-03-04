@@ -2,91 +2,91 @@ export const netflixData = [
   {
     id: 1,
     name: "Avengers: Endgame (2019)",
-    rating: 8.4,
+    rating: "8.4",
     genre: "Action / Adventure",
-    ageLimit: 18,
     img: "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+    imdb: "https://www.imdb.com/title/tt4154796/",
     summary: "After the devastating events of Infinity War, the Avengers assemble once more."
   },
   {
     id: 2,
-    name: "Stranger Things",
-    rating: 8.7,
-    genre: "Sci-Fi / Thriller",
-    ageLimit: 16,
-    img: "https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg",
-    summary: "A group of kids uncover supernatural mysteries in their small town."
+    name: "Inception (2010)",
+    rating: "8.8",
+    genre: "Action / Sci-Fi",
+    img: "https://image.tmdb.org/t/p/w500/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg",
+    imdb: "https://www.imdb.com/title/tt1375666/",
+    summary: "A thief who steals corporate secrets through dream-sharing technology is given an inverse task."
   },
   {
     id: 3,
-    name: "Money Heist",
-    rating: 8.2,
-    genre: "Crime / Drama",
-    ageLimit: 18,
-    img: "https://image.tmdb.org/t/p/w500/mo0FP1GxOFZT4UDde7RFDz5APXF.jpg",
-    summary: "A criminal mastermind plans the biggest heist in history."
+    name: "The Dark Knight (2008)",
+    rating: "9.0",
+    genre: "Action / Crime",
+    img: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    imdb: "https://www.imdb.com/title/tt0468569/",
+    summary: "Batman battles the menacing Joker in Gotham City."
   },
   {
     id: 4,
-    name: "The Witcher",
-    rating: 8.1,
-    genre: "Fantasy / Action",
-    ageLimit: 18,
-    img: "https://image.tmdb.org/t/p/w500/cZ0d3rtvXPVvuiX22sP79K3Hmjz.jpg",
-    summary: "A monster hunter struggles to find his place in a world of magic."
+    name: "Interstellar (2014)",
+    rating: "8.6",
+    genre: "Adventure / Sci-Fi",
+    img: "https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg",
+    imdb: "https://www.imdb.com/title/tt0816692/",
+    summary: "A team travels through a wormhole in space to ensure humanity’s survival."
   },
   {
     id: 5,
-    name: "Dark",
-    rating: 8.8,
-    genre: "Sci-Fi / Mystery",
-    ageLimit: 16,
-    img: "https://image.tmdb.org/t/p/w500/5LoM6n2xO7rM1EbDqYjKpF3UqvG.jpg",
-    summary: "A time-travel mystery that spans generations."
+    name: "Joker (2019)",
+    rating: "8.5",
+    genre: "Crime / Drama",
+    img: "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
+    imdb: "https://www.imdb.com/title/tt7286456/",
+    summary: "A gritty character study of Arthur Fleck’s descent into the Joker persona."
   },
   {
     id: 6,
-    name: "Extraction",
-    rating: 6.8,
-    genre: "Action / Thriller",
-    ageLimit: 18,
-    img: "https://image.tmdb.org/t/p/w500/wlfDxbGEsW58vGhFljKkcR5IxDj.jpg",
-    summary: "A black-market mercenary is hired to rescue a kidnapped boy."
+    name: "Parasite (2019)",
+    rating: "8.6",
+    genre: "Thriller / Drama",
+    img: "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+    imdb: "https://www.imdb.com/title/tt6751668/",
+    summary: "Greed and class discrimination threaten the newly formed symbiotic relationship between two families."
   },
   {
     id: 7,
-    name: "Wednesday",
-    rating: 8.0,
-    genre: "Comedy / Mystery",
-    ageLimit: 13,
-    img: "https://image.tmdb.org/t/p/w500/9PFonBhy4cQy7Jz20NpMygczOkv.jpg",
-    summary: "Wednesday Addams investigates supernatural mysteries."
+    name: "The Matrix (1999)",
+    rating: "8.7",
+    genre: "Sci-Fi / Action",
+    img: "https://image.tmdb.org/t/p/w500/aOIuZAjPaYXOdxBXeqNJHreWz9u.jpg",
+    imdb: "https://www.imdb.com/title/tt0133093/",
+    summary: "A hacker discovers the nature of reality and his role in the war against its controllers."
   },
   {
     id: 8,
-    name: "The Crown",
-    rating: 8.6,
-    genre: "Drama / History",
-    ageLimit: 16,
-    img: "https://image.tmdb.org/t/p/w500/1M876KPjulVwppEpldhdc8V4o68.jpg",
-    summary: "The story of Queen Elizabeth II and modern British history."
+    name: "The Shawshank Redemption (1994)",
+    rating: "9.3",
+    genre: "Drama",
+    img: "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
+    imdb: "https://www.imdb.com/title/tt0111161/",
+    summary: "Two imprisoned men bond over a number of years, finding solace and redemption."
   },
   {
     id: 9,
-    name: "Narcos",
-    rating: 8.8,
-    genre: "Crime / Biography",
-    ageLimit: 18,
-    img: "https://image.tmdb.org/t/p/w500/rTmal9fDbwh5F0waol2hq35U4ah.jpg",
-    summary: "The rise and fall of drug kingpin Pablo Escobar."
+    name: "Fight Club (1999)",
+    rating: "8.8",
+    genre: "Drama",
+    img: "https://image.tmdb.org/t/p/w500/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg",
+    imdb: "https://www.imdb.com/title/tt0137523/",
+    summary: "An insomniac office worker crosses paths with a soapmaker and launches a club."
   },
   {
     id: 10,
-    name: "Lupin",
-    rating: 7.5,
+    name: "The Godfather (1972)",
+    rating: "9.2",
     genre: "Crime / Drama",
-    ageLimit: 16,
-    img: "https://image.tmdb.org/t/p/w500/sgxawbFB5Vi5OkPWQLNfl3dvkNJ.jpg",
-    summary: "A gentleman thief seeks revenge for his father."
+    img: "https://image.tmdb.org/t/p/w500/eEslKSwcqmiNS6va24Pbxf2UKmJ.jpg",
+    imdb: "https://www.imdb.com/title/tt0068646/",
+    summary: "The aging patriarch of an organized crime dynasty transfers control to his son."
   }
 ];

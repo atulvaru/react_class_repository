@@ -5,10 +5,6 @@ const App = () => {
     <>
       {/* 🔁 Rendering Multiple Netflix Components */}
       <Netflix />
-      <Netflix />
-      <Netflix />
-      <Netflix />
-      <Netflix />
     </>
   );
 };
