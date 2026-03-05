@@ -1,10 +1,40 @@
 // import "./ServiceCard.css";
 import styles from "./ServiceCard.module.css";
+import styled from "styled-components";
 export const ServiceCard = (props) => {
   const { name, img, rating, summary, genre, imdb } = props.data;
 
   const ratingClass = rating >= 8.5 ? styles.color_green : styles.color_red;
-  const btnClass = Number(rating) >= 8.5 ? styles.btn_green : styles.btn_red;
+  // const btnClass = Number(rating) >= 8.5 ? styles.btn_green : styles.btn_red;
+
+//   // using styled object
+// const ButtonMy = styled.button({
+//     marginTop: "15px",
+//     padding: "10px 14px",
+//     border: "none",
+//     backgroundColor: rating >= 8.5 ? "green" : "red",
+//     borderRadius: "6px",
+//     color: "white",
+//     fontWeight: "500",
+//     cursor: "pointer",
+//     transition: "0.2s",
+//   });
+
+// Using Template Literals (Most Common)
+const ButtonMy = styled.button`
+    margin-top: 15px;
+    padding: 10px 14px;
+    border: none;
+    background-color: ${(props) => (props.rating >= 8.5 ? "green" : "red")};
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+        transform: scale(1.05);
+    }
+`;
 
   return (
     <div className={styles["movie-card"]}>
@@ -23,7 +53,8 @@ export const ServiceCard = (props) => {
 
         {/* 🔐 Conditional Rendering */}
         <a href={imdb} target="_blank">
-          <button className={`${styles["movie-btn"]} ${btnClass}`}>Watch Now</button>
+          {/* <button className={`${styles["movie-btn"]} ${btnClass}`}>Watch Now</button> */}
+          <ButtonMy rating={rating}>Watch Now</ButtonMy>
         </a>
       </div>
     </div>
