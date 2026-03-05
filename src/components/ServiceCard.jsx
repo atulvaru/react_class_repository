@@ -1,18 +1,19 @@
 export const ServiceCard = (props)=>{
+    const { name,img,rating,summary,genre,imdb} = props.data;
      return (
           <div  className="movie-card">
             {/* 🖼 Movie Poster */}
-            <img src={props.movie.img} alt="movie-poster" />
+            <img src={img} alt="movie-poster" />
 
             <div>
               {/* 📌 Dynamic Values in JSX */}
-              <h1>🎥 Movie Name: {props.movie.name}</h1>
-              <h3>⭐ Rating: {props.movie.rating}</h3>
-              <p>📝 Summary: {props.movie.summary}</p>
-              <p>🎭 Genre: {props.movie.genre}</p>
+              <h1>🎥 Movie Name: {name}</h1>
+              <h3>⭐ Rating: {rating}</h3>
+              <p>📝 Summary: {summary}</p>
+              <p>🎭 Genre: {genre}</p>
 
               {/* 🔐 Conditional Rendering */}
-              <a href={props.movie.imdb} target="_blank">
+              <a href={imdb} target="_blank">
                 <button>{"Watch Now"}</button>
               </a>
             </div>
