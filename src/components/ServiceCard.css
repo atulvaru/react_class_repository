@@ -58,13 +58,40 @@
   padding:10px 14px;
   border:none;
   border-radius:6px;
-  background:#ef4444;
+  /* background:#ef4444; */
   color:white;
   font-weight:500;
   cursor:pointer;
   transition:0.2s;
 }
 
-.movie-btn:hover{
+ 
+.color_green{
+  background:#22c55e;
+}
+.color_red{
+  background:#ef4444;
+}
+.rating{
+  border-radius: 20px;
+  padding: 5px 10px;
+  color: black;
+  font-weight: 500;
+}
+.btn_green{
+  background-color:#22c55e;
+}
+
+.btn_red{
+  background-color:#ef4444;
+}
+
+/* Hover */
+
+.btn_green:hover{
+  background:#16a34a;
+}
+
+.btn_red:hover{
   background:#dc2626;
 }
