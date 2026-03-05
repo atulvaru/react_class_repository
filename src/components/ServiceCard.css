@@ -1,0 +1,70 @@
+/* ServiceCard.css */
+
+.movie-card{
+  background:#1e293b;
+  border-radius:12px;
+  overflow:hidden;
+  transition:0.3s ease;
+  display:flex;
+  flex-direction:column;
+}
+
+.movie-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* Poster */
+
+.movie-card img{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+}
+
+/* Content */
+
+.movie-content{
+  padding:18px;
+}
+
+.movie-title{
+  font-size:20px;
+  font-weight:600;
+  margin-bottom:8px;
+}
+
+.movie-rating{
+  color:#facc15;
+  margin-bottom:10px;
+}
+
+.movie-genre{
+  font-size:14px;
+  color:#94a3b8;
+  margin-bottom:10px;
+}
+
+.movie-summary{
+  font-size:14px;
+  line-height:1.5;
+  color:#cbd5f5;
+}
+
+/* Button */
+
+.movie-btn{
+  margin-top:15px;
+  padding:10px 14px;
+  border:none;
+  border-radius:6px;
+  background:#ef4444;
+  color:white;
+  font-weight:500;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.movie-btn:hover{
+  background:#dc2626;
+}
