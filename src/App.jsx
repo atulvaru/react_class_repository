@@ -1,6 +1,7 @@
 // import "./App.css";
 // import Netflix from "./components/Netflix.jsx"
 import { EventHandling } from "./components/EventHandling.jsx";
+import { EventPropagation } from "./components/EventPropagation.jsx";
 import { EventProps } from "./components/EventProps.jsx";
 const App = () => {
   return (
@@ -10,7 +11,8 @@ const App = () => {
       </h1> */}
       {/* <Netflix /> */}
       {/* < EventHandling /> */}
-      <EventProps />
+      {/* <EventProps />   */}
+      <EventPropagation />
     </section>
   );
 };
