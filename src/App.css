@@ -1,4 +1,4 @@
-/* App.css */
+/* 
 
 .app{
   max-width:1200px;
@@ -13,34 +13,13 @@
   color:#f8fafc;
 }
 
-/* Grid Layout */
 
-.movie-grid{
-  display:grid;
-  grid-template-columns: repeat(3,1fr);
-  gap:30px;
-}
 
-/* Tablet */
-
-@media (max-width:900px){
-
-.movie-grid{
-  grid-template-columns: repeat(2,1fr);
-}
-
-}
-
-/* Mobile */
 
 @media (max-width:600px){
-
-.movie-grid{
-  grid-template-columns:1fr;
-}
 
 .app h1{
   font-size:28px;
 }
 
-}
+} */

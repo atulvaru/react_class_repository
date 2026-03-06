@@ -1,5 +1,4 @@
-/* ServiceCard.css */
-
+/*  
 .movie-card{
   background:#1e293b;
   border-radius:12px;
@@ -13,8 +12,7 @@
   transform:translateY(-6px);
   box-shadow:0 15px 30px rgba(0,0,0,0.4);
 }
-
-/* Poster */
+ 
 
 .movie-card img{
   width:100%;
@@ -22,7 +20,7 @@
   object-fit:cover;
 }
 
-/* Content */
+ 
 
 .movie-content{
   padding:18px;
@@ -50,22 +48,21 @@
   line-height:1.5;
   color:#cbd5f5;
 }
+   */
 
-/* Button */
-
-.movie-btn{
+/* .movie-btn{
   margin-top:15px;
   padding:10px 14px;
   border:none;
   border-radius:6px;
-  /* background:#ef4444; */
+   background:#ef4444;  
   color:white;
   font-weight:500;
   cursor:pointer;
   transition:0.2s;
-}
+} */
 
- 
+/*  
 .color_green{
   background:#22c55e;
 }
@@ -86,7 +83,7 @@
   background-color:#ef4444;
 }
 
-/* Hover */
+ 
 
 .btn_green:hover{
   background:#16a34a;
@@ -94,4 +91,4 @@
 
 .btn_red:hover{
   background:#dc2626;
-}
+} */
