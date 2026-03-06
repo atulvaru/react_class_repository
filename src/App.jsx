@@ -1,6 +1,7 @@
 // import "./App.css";
 // import Netflix from "./components/Netflix.jsx"
 import { EventHandling } from "./components/EventHandling.jsx";
+import { EventProps } from "./components/EventProps.jsx";
 const App = () => {
   return (
   <section className="max-w-[1200px] mx-auto px-5 py-10">
@@ -8,7 +9,8 @@ const App = () => {
         List of Netflix Shows
       </h1> */}
       {/* <Netflix /> */}
-      < EventHandling />
+      {/* < EventHandling /> */}
+      <EventProps />
     </section>
   );
 };
