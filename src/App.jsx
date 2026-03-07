@@ -1,11 +1,12 @@
 // import "./App.css";
 // import Netflix from "./components/Netflix.jsx"
-import { EventHandling } from "./components/EventHandling.jsx";
-import { EventPropagation } from "./components/EventPropagation.jsx";
-import { EventProps } from "./components/EventProps.jsx";
-import { State } from "./components/hooks/State.jsx";
-import { StatePractise } from "./components/hooks/StatePractise.jsx";
-import { DerivedState } from "./components/hooks/DerivedState.jsx";
+// import { EventHandling } from "./components/EventHandling.jsx";
+// import { EventPropagation } from "./components/EventPropagation.jsx";
+// import { EventProps } from "./components/EventProps.jsx";
+// import { State } from "./components/hooks/State.jsx";
+// import { StatePractise } from "./components/hooks/StatePractise.jsx";
+// import { DerivedState } from "./components/hooks/DerivedState.jsx";
+import { LiftingState } from "./components/LiftingState.jsx";
 const App = () => {
   return (
   <section className="max-w-[1200px] mx-auto px-5 py-10">
@@ -18,7 +19,8 @@ const App = () => {
       {/* <EventPropagation /> */}
       {/* <State /> */}
       {/* <StatePractise /> */}
-      <DerivedState />
+      {/* <DerivedState /> */}
+      <LiftingState />
     </section>
   );
 };
