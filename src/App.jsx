@@ -5,6 +5,7 @@ import { EventPropagation } from "./components/EventPropagation.jsx";
 import { EventProps } from "./components/EventProps.jsx";
 import { State } from "./components/hooks/State.jsx";
 import { StatePractise } from "./components/hooks/StatePractise.jsx";
+import { DerivedState } from "./components/hooks/DerivedState.jsx";
 const App = () => {
   return (
   <section className="max-w-[1200px] mx-auto px-5 py-10">
@@ -16,7 +17,8 @@ const App = () => {
       {/* <EventProps />   */}
       {/* <EventPropagation /> */}
       {/* <State /> */}
-      <StatePractise />
+      {/* <StatePractise /> */}
+      <DerivedState />
     </section>
   );
 };
