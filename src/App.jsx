@@ -6,10 +6,11 @@
 // import { State } from "./components/hooks/State.jsx";
 // import { StatePractise } from "./components/hooks/StatePractise.jsx";
 // import { DerivedState } from "./components/hooks/DerivedState.jsx";
-import { LiftingState } from "./components/LiftingState.jsx";
+// import { LiftingState } from "./components/LiftingState.jsx";
+import { MiniToggle } from "./components/MiniToggle.jsx";
 const App = () => {
   return (
-  <section className="max-w-[1200px] mx-auto px-5 py-10">
+    <section className="max-w-[1200px] mx-auto px-5 py-10">
       {/* <h1 className="text-center text-4xl md:text-4xl sm:text-3xl mb-10 text-slate-50">
         List of Netflix Shows
       </h1> */}
@@ -20,11 +21,10 @@ const App = () => {
       {/* <State /> */}
       {/* <StatePractise /> */}
       {/* <DerivedState /> */}
-      <LiftingState />
+      {/* <LiftingState /> */}
+      <MiniToggle />
     </section>
   );
 };
-
-
 
 export default App;

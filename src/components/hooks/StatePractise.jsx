@@ -10,7 +10,6 @@ import { useState } from "react";
 // 8️⃣ Todo List
 // 9️⃣ Click Tracker
 
-
 // 1️⃣ Counter
 export const Counter = () => {
   const [count, setCount] = useState(0);
