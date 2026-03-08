@@ -19,7 +19,7 @@ export const MiniToggle = () => {
         </div>
       </div>
 
-      <p className="text-center mt-4 text-lg font-semibold">
+      <p className="text-center mt-4 text-lg font-semibold transform transition-transform duration-300">
         {isOn ? "⚡ Power ON 🔋" : "🌙 Power OFF 💤"}
       </p>
     </>
