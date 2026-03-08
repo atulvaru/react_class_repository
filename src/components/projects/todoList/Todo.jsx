@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TiTick } from "react-icons/ti";
 import { MdDeleteForever } from "react-icons/md";
 import { CiCalendarDate } from "react-icons/ci";
@@ -6,6 +6,7 @@ import { CiCalendarDate } from "react-icons/ci";
 export const Todo = () => {
   const [newTask, setNewTask] = useState("");
   const [tasks, setTasks] = useState([]);
+  const [currentDate, setCurrentDate] = useState("");
 
   const handleNewTask = (value) => {
     setNewTask(value);
@@ -26,9 +27,23 @@ export const Todo = () => {
     // not repeating tasks in the list
   };
 
-  const now = new Date();
-  const currentDate = now.toLocaleDateString();
-  const currentTime = now.toLocaleTimeString();
+  useEffect(() => {
+    setInterval(() => {
+      const now = new Date();
+      const currentDate = now.toLocaleDateString();
+      const currentTime = now.toLocaleTimeString();
+      setCurrentDate(`${currentDate} - ${currentTime}`);
+    }, 1000);
+  }, []);
+
+  const handleDeleteItems = (task) => {
+    const updatedTasks = tasks.filter((curElem) => curElem !== task);
+    setTasks(updatedTasks);
+  };
+
+  const handleClearAllItems = () => {
+    setTasks([]);
+  };
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-8 px-4 sm:px-6 lg:px-8">
@@ -45,18 +60,36 @@ export const Todo = () => {
               Stay organized and boost your productivity
             </p>
           </section>
-          <section className="">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">
-                <CiCalendarDate />
+          <section className="mb-8">
+            <div className="bg-gradient-to-r from-blue-100 via-indigo-100 to-purple-100 rounded-2xl p-8 shadow-lg shadow-blue-200 border border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <div className="flex items-center justify-center gap-4">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-600 rounded-full flex items-center justify-center text-white text-3xl shadow-lg animate-pulse">
+                  📅
+                </div>
+                <div className="flex-1 text-center sm:text-left">
+                  <p className="text-sm font-semibold text-indigo-600 mb-1 uppercase tracking-wider">
+                    📍 Today's Schedule
+                  </p>
+                  <h3 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                    🕐 {currentDate}
+                  </h3>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-800">
-                {currentDate} - {currentTime}
-              </h3>
+              <div className="mt-4 flex justify-center gap-3 text-sm font-medium text-gray-700">
+                <span className="bg-white px-4 py-2 rounded-full shadow-sm border border-blue-200">
+                  ✨ Stay Productive
+                </span>
+                <span className="bg-white px-4 py-2 rounded-full shadow-sm border border-indigo-200">
+                  🎯 Complete Tasks
+                </span>
+              </div>
             </div>
           </section>
           {/* Add Task Form */}
           <section className="bg-white rounded-2xl shadow-lg shadow-blue-100 p-6 sm:p-8 mb-8 border border-blue-100 hover:shadow-xl transition-shadow duration-300">
+            <h4 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+              ➕ Add New Task
+            </h4>
             <form onSubmit={handleOnSubmit} className="space-y-4">
               <div className="relative">
                 <input
@@ -114,6 +147,7 @@ export const Todo = () => {
                       <button
                         className="bg-gradient-to-r from-red-400 to-rose-500 hover:from-red-500 hover:to-rose-600 text-white p-2.5 rounded-lg transition-all duration-200 transform hover:scale-110 active:scale-95 shadow-md hover:shadow-lg"
                         title="Delete task"
+                        onClick={() => handleDeleteItems(task)}
                       >
                         <MdDeleteForever size={18} />
                       </button>
@@ -123,15 +157,29 @@ export const Todo = () => {
               </ul>
             )}
           </section>
+          {tasks.length > 0 && (
+            <section className="mt-8 flex justify-center">
+              <button
+                className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 transform hover:scale-110 active:scale-95 shadow-xl hover:shadow-2xl shadow-red-400/50 hover:shadow-red-500/70 uppercase tracking-widest text-lg"
+                onClick={handleClearAllItems}
+              >
+                🗑️ Clear All Tasks
+              </button>
+            </section>
+          )}
 
           {/* Footer Stats */}
           {tasks.length > 0 && (
-            <div className="mt-8 text-center">
-              <p className="text-gray-600 text-sm">
-                You have{" "}
-                <span className="font-bold text-blue-600">{tasks.length}</span>{" "}
-                task{tasks.length !== 1 ? "s" : ""} to complete
-              </p>
+            <div className="mt-8">
+              <div className="bg-gradient-to-r from-blue-100 via-indigo-100 to-purple-100 rounded-2xl p-6 border-2 border-blue-300 shadow-lg">
+                <p className="text-center text-lg font-bold text-gray-800">
+                  📊 You have{" "}
+                  <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    {tasks.length}
+                  </span>{" "}
+                  task{tasks.length !== 1 ? "s" : ""} to complete today! 💪
+                </p>
+              </div>
             </div>
           )}
         </div>
