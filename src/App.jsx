@@ -11,7 +11,7 @@
 import { Todo } from "./components/projects/todoList/todo.jsx";
 const App = () => {
   return (
-    <section className="max-w-[1200px] mx-auto px-5 py-10">
+    <section className="   ">
       {/* <h1 className="text-center text-4xl md:text-4xl sm:text-3xl mb-10 text-slate-50">
         List of Netflix Shows
       </h1> */}

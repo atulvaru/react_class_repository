@@ -1,19 +1,16 @@
 import { useState } from "react";
 
-
-
 export const LiftingState = () => {
-    const [count, setCount] = useState("");
+  const [count, setCount] = useState("");
   return (
     <>
       <h2>Lifting State Example</h2>
-      <InputComponent count ={count} setCount={setCount}/>
-      <OutputComponent count={count}/>
+      <InputComponent count={count} setCount={setCount} />
+      <OutputComponent count={count} />
     </>
   );
 };
-const InputComponent = ({count,setCount}) => {
-
+const InputComponent = ({ count, setCount }) => {
   return (
     <>
       <input
@@ -27,7 +24,7 @@ const InputComponent = ({count,setCount}) => {
   );
 };
 
-const OutputComponent = ({count}) => {
+const OutputComponent = ({ count }) => {
   return (
     <>
       <p>This is the output: {count}</p>
