@@ -8,7 +8,8 @@
 // import { DerivedState } from "./components/hooks/DerivedState.jsx";
 // import { LiftingState } from "./components/LiftingState.jsx";
 // import { MiniToggle } from "./components/MiniToggle.jsx";
-import { Todo } from "./components/projects/todoList/todo.jsx";
+// import { Todo } from "./components/projects/todoList/todo.jsx";
+import { ShortCircuit } from "./components/ShortCircuit.jsx";
 const App = () => {
   return (
     <section className="   ">
@@ -24,7 +25,8 @@ const App = () => {
       {/* <DerivedState /> */}
       {/* <LiftingState /> */}
       {/* <MiniToggle /> */}
-      <Todo />
+      {/* <Todo /> */}
+      <ShortCircuit />
     </section>
   );
 };
