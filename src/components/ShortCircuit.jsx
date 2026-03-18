@@ -8,7 +8,6 @@ export const ShortCircuit = () => {
     <>
       <div className="sc-container">
         <div className="sc-wrapper">
-       
 
           {/* Main Content Card */}
           <div className="sc-content">
@@ -49,14 +48,6 @@ export const ShortCircuit = () => {
               <span className="sc-button-icon">🗑️</span>
               <span>Clear Data</span>
             </button>
-          </div>
-
-          {/* Footer Info */}
-          <div className="sc-footer">
-            <p className="sc-footer-text">
-              💡 Tip: Use short circuit operators to conditionally render
-              components and manage state efficiently
-            </p>
           </div>
         </div>
       </div>

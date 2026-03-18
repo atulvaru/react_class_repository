@@ -9,7 +9,11 @@
 // import { LiftingState } from "./components/LiftingState.jsx";
 // import { MiniToggle } from "./components/MiniToggle.jsx";
 // import { Todo } from "./components/projects/todoList/todo.jsx";
-import { ShortCircuit } from "./components/ShortCircuit.jsx";
+// import { ShortCircuit } from "./components/ShortCircuit.jsx";
+// import { Counter } from "./components/projects/useState/Counter.jsx";
+// import { Registration } from "./components/projects/useState/Registration.jsx";
+// import { RegistrationReactN } from "./components/projects/useState/RegistrationReactN.jsx";
+import { LoginReact } from "./components/projects/useState/LoginReact.jsx"; 
 const App = () => {
   return (
     <section className="   ">
@@ -26,7 +30,11 @@ const App = () => {
       {/* <LiftingState /> */}
       {/* <MiniToggle /> */}
       {/* <Todo /> */}
-      <ShortCircuit />
+      {/* <ShortCircuit /> */}
+      {/* <Counter /> */}
+      {/* <Registration /> */}
+      {/* <RegistrationReactN /> */}
+      <LoginReact />
     </section>
   );
 };
