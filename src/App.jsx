@@ -13,7 +13,21 @@
 // import { Counter } from "./components/projects/useState/Counter.jsx";
 // import { Registration } from "./components/projects/useState/Registration.jsx";
 // import { RegistrationReactN } from "./components/projects/useState/RegistrationReactN.jsx";
-import { LoginReact2 } from "./components/projects/useState/LoginReact2.jsx";
+// import { ContactForm } from "./components/projects/useState/ContactForm.jsx";
+// import { LoginReact2 } from "./components/projects/useState/LoginReact2.jsx";
+
+import { Pokiemon } from "./components/projects/useEffect/Pokiemon";
+
+// import { NotUseFetch } from "./components/projects/useEffect/HowFetchAPI";
+
+// import { CleanUp } from "./components/projects/useEffect/CleanUp";
+
+// import { Challenge } from "./components/projects/useEffect/EffectChallenge";
+
+// import { FirstUseEffect } from "./components/projects/useEffect";
+// import { FirstUseEffect2 } from "./components/projects/useEffect/index2.jsx";
+
+// import ContactForm2 from "./components/projects/useState/ContactForm2.jsx";
 const App = () => {
   return (
     <section className="   ">
@@ -35,7 +49,15 @@ const App = () => {
       {/* <Registration /> */}
       {/* <RegistrationReactN /> */}
       {/* <LoginReact /> */}
-      <LoginReact2 />
+      {/* <LoginReact2 /> */}
+      {/* <ContactForm /> */}
+      {/* <ContactForm2 /> */}
+      {/* <FirstUseEffect /> */}
+      {/* <FirstUseEffect2 /> */}
+      {/* <Challenge /> */}
+      {/* <CleanUp /> */}
+      {/* <NotUseFetch /> */}
+      <Pokiemon />
     </section>
   );
 };

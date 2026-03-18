@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Press+Start+2P&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0d0f1a;
+  --card-bg: #13162a;
+  --card-border: rgba(255,255,255,0.08);
+  --text: #eef0ff;
+  --muted: #8b8fb0;
+  --yellow: #ffd54f;
+}
+
+.poke-page {
+  min-height: 100vh;
+  background: var(--bg);
+  font-family: 'Nunito', sans-serif;
+  color: var(--text);
+  padding: 2.5rem 1rem 4rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Blobs */
+.poke-blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.13;
+  pointer-events: none;
+  z-index: 0;
+}
+.blob1 { width: 500px; height: 500px; background: #ffd54f; top: -150px; left: -100px; }
+.blob2 { width: 400px; height: 400px; background: #4fc3f7; bottom: -100px; right: -80px; }
+
+.poke-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  animation: fadeUp 0.5s ease both;
+}
+
+/* Title */
+.poke-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
+.poke-ball-icon {
+  color: var(--yellow);
+  font-size: 1rem;
+  animation: pulse 2s ease infinite;
+}
+.poke-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  background: linear-gradient(90deg, #fff 30%, var(--yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Search */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.search-box:focus-within {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 3px rgba(255, 213, 79, 0.12);
+}
+.poke-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.poke-input::placeholder { color: var(--muted); }
+.clear-btn {
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: var(--muted);
+  border-radius: 8px;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.2s;
+}
+.clear-btn:hover { background: rgba(255,255,255,0.15); color: #fff; }
+
+/* Count */
+.poke-count {
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-align: center;
+}
+.poke-count strong { color: var(--yellow); }
+
+/* States */
+.poke-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+}
+.poke-error { color: #ff6b6b; }
+.poke-loader {
+  width: 42px; height: 42px;
+  border: 3px solid rgba(255,255,255,0.08);
+  border-top-color: var(--yellow);
+  border-radius: 50%;
+  animation: spin 0.65s linear infinite;
+}
+
+/* ── GRID ── */
+.poke-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+/* ── CARD ── */
+.poke-card {
+  position: relative;
+  background: linear-gradient(180deg, rgba(17,24,39,0.95), rgba(15,23,42,0.95));
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  animation: fadeUp 0.4s ease both;
+}
+.poke-card:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--type-color) 50%, transparent);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.5), 0 0 30px color-mix(in srgb, var(--type-color) 15%, transparent);
+}
+
+/* Card glow */
+.poke-card-glow {
+  position: absolute;
+  top: -60px; left: 50%;
+  transform: translateX(-50%);
+  width: 250px; height: 180px;
+  background: var(--type-color);
+  filter: blur(60px);
+  opacity: 0.1;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+/* Card Top */
+.poke-card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.8rem 1.2rem 1.2rem;
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--type-color) 10%, transparent) 0%,
+    transparent 100%);
+  border-bottom: 1px solid var(--card-border);
+  position: relative;
+}
+
+.poke-id {
+  position: absolute;
+  top: 1rem; right: 1.2rem;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.58rem;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+/* Sprite */
+.poke-sprite-wrap {
+  position: relative;
+  width: 140px; height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+}
+.poke-sprite-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid color-mix(in srgb, var(--type-color) 30%, transparent);
+  background: color-mix(in srgb, var(--type-color) 8%, transparent);
+  animation: ringPulse 3s ease infinite;
+}
+.poke-sprite {
+  width: 115px; height: 115px;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 8px 18px color-mix(in srgb, var(--type-color) 40%, transparent));
+  animation: float 3s ease-in-out infinite;
+}
+
+.poke-name {
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.poke-types {
+  display: flex;
+  gap: 0.45rem;
+}
+.poke-type-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.22rem 0.7rem;
+  border-radius: 999px;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Info Grid */
+.poke-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+}
+.poke-info-box {
+  background: rgba(13,15,26,0.8);
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.poke-info-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+.poke-info-val {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: capitalize;
+}
+.poke-abilities { font-size: 0.75rem; }
+
+/* Stats */
+.poke-stats-section {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--card-border);
+}
+.poke-section-title {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+.poke-stats { display: flex; flex-direction: column; gap: 0.45rem; }
+.poke-stat-row { display: flex; align-items: center; gap: 0.6rem; }
+.poke-stat-label {
+  font-size: 0.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  width: 46px;
+  flex-shrink: 0;
+  text-align: right;
+}
+.poke-stat-bar-bg {
+  flex: 1;
+  height: 6px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.poke-stat-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--type-color), color-mix(in srgb, var(--type-color) 60%, #fff));
+  border-radius: 999px;
+  animation: barGrow 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.poke-stat-num {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #fff;
+  width: 26px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Moves */
+.poke-moves-section { padding: 1rem 1.2rem; }
+.poke-moves { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.poke-move-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 0.22rem 0.6rem;
+  border-radius: 7px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--muted);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.poke-move-tag:hover {
+  background: color-mix(in srgb, var(--type-color) 15%, transparent);
+  border-color: color-mix(in srgb, var(--type-color) 40%, transparent);
+  color: var(--text);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes ringPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.04); }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+@keyframes barGrow {
+  from { width: 0 !important; }
+}
+
+@media (max-width: 600px) {
+  .poke-grid { grid-template-columns: 1fr; }
+  .poke-sprite { width: 100px; height: 100px; }
+}
