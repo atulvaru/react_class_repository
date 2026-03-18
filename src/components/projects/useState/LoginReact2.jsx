@@ -9,12 +9,8 @@ export const LoginReact2 = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    const formData = {
-      email: user.email,
-      password: user.password,
-    };
-
-    console.log("Login Data:", formData);
+     
+    console.log("Login Data:", user);
     setTimeout(() => {
       setIsLoading(false);
       alert("Login successful!");
