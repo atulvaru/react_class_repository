@@ -13,7 +13,7 @@
 // import { Counter } from "./components/projects/useState/Counter.jsx";
 // import { Registration } from "./components/projects/useState/Registration.jsx";
 // import { RegistrationReactN } from "./components/projects/useState/RegistrationReactN.jsx";
-import { LoginReact } from "./components/projects/useState/LoginReact.jsx"; 
+import { LoginReact2 } from "./components/projects/useState/LoginReact2.jsx";
 const App = () => {
   return (
     <section className="   ">
@@ -34,7 +34,8 @@ const App = () => {
       {/* <Counter /> */}
       {/* <Registration /> */}
       {/* <RegistrationReactN /> */}
-      <LoginReact />
+      {/* <LoginReact /> */}
+      <LoginReact2 />
     </section>
   );
 };
