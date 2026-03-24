@@ -16,10 +16,13 @@
 // import { ContactForm } from "./components/projects/useState/ContactForm.jsx";
 // import { LoginReact2 } from "./components/projects/useState/LoginReact2.jsx";
 
-import { BioProvider } from "./components/projects/useContextAPI";
-import { About } from "./components/projects/useContextAPI/About";
+// import { BioProvider } from "./components/projects/useContextAPI";
+// import { About } from "./components/projects/useContextAPI/About";
  
-import { Home } from "./components/projects/useContextAPI/Home";
+// import { Home } from "./components/projects/useContextAPI/Home";
+// import { DarkLight, ThemeHookProvider } from "./components/projects/useContextAPI/Toggle";
+import { ThemeHookProvider } from "./components/projects/useContextAPI/Toggle";
+import { ToggleDarkLight } from "./components/projects/useContextAPI/ToggleDarkLight";
 
 // import { PropsDrilling } from "./components/PropsDrilling";
 
@@ -75,10 +78,13 @@ const App = () => {
       {/* <UseId /> */}
       {/* <PropsDrilling /> */}
 
-      <BioProvider>
+      {/* <BioProvider>
         <Home />
         <About />
-      </BioProvider>
+      </BioProvider> */}
+      <ThemeHookProvider>
+        <ToggleDarkLight />
+      </ThemeHookProvider>
     </section>
   );
 };

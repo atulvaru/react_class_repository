@@ -1,13 +1,12 @@
 @import "tailwindcss";
 
-body {
+/* body {
   font-family:
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
-  /* background-color: blue; */
-  /* color: #e2e8f0; */
+ 
   height: 100vh;
   background: linear-gradient(135deg, #667eea, #764ba2);
   display: flex;
@@ -34,7 +33,7 @@ form:hover {
   transform: translateY(-3px);
 }
 
-/* Input fields */
+ 
 input {
   padding: 12px 14px;
   border-radius: 8px;
@@ -49,7 +48,7 @@ input:focus {
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
 }
 
-/* Button */
+ 
 button {
   padding: 12px;
   border: none;
@@ -71,7 +70,7 @@ button:active {
   transform: scale(0.98);
 }
 
-/* Placeholder styling */
+ 
 input::placeholder {
   color: #aaa;
 }
@@ -79,4 +78,4 @@ input::placeholder {
 h1{
   font-size: 20px;
   font-weight: 500;
-}
+} */
