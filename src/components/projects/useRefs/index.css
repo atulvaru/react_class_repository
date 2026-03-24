@@ -1,13 +1,12 @@
-@import "tailwindcss";
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
 body {
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
-  /* background-color: blue; */
-  /* color: #e2e8f0; */
   height: 100vh;
   background: linear-gradient(135deg, #667eea, #764ba2);
   display: flex;
@@ -15,9 +14,7 @@ body {
   align-items: center;
 }
 
-a {
-  text-decoration: none;
-}
+/* Form container */
 form {
   background: #ffffff;
   padding: 30px 25px;
@@ -74,9 +71,4 @@ button:active {
 /* Placeholder styling */
 input::placeholder {
   color: #aaa;
-}
-
-h1{
-  font-size: 20px;
-  font-weight: 500;
 }

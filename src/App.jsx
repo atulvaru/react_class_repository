@@ -16,8 +16,19 @@
 // import { ContactForm } from "./components/projects/useState/ContactForm.jsx";
 // import { LoginReact2 } from "./components/projects/useState/LoginReact2.jsx";
 
-import { Pokiemon } from "./components/projects/useEffect/Pokiemon";
+import { BioProvider } from "./components/projects/useContextAPI";
+import { About } from "./components/projects/useContextAPI/About";
+ 
+import { Home } from "./components/projects/useContextAPI/Home";
 
+// import { PropsDrilling } from "./components/PropsDrilling";
+
+// import { PokiemonLearn } from "./components/projects/useEffect/PokiemonLearn";
+
+// import { Pokiemon } from "./components/projects/useEffect/Pokiemon";
+// import { LearnUseRef } from "./components/projects/useRefs";
+// import { ForwordRefDemo } from "./components/projects/useRefs/useForwordRef";
+// import { UseId } from "./components/projects/UseIdHood.jsx/useID";
 // import { NotUseFetch } from "./components/projects/useEffect/HowFetchAPI";
 
 // import { CleanUp } from "./components/projects/useEffect/CleanUp";
@@ -57,7 +68,17 @@ const App = () => {
       {/* <Challenge /> */}
       {/* <CleanUp /> */}
       {/* <NotUseFetch /> */}
-      <Pokiemon />
+      {/* <Pokiemon /> */}
+      {/* <PokiemonLearn /> */}
+      {/* <LearnUseRef /> */}
+      {/* <ForwordRefDemo /> */}
+      {/* <UseId /> */}
+      {/* <PropsDrilling /> */}
+
+      <BioProvider>
+        <Home />
+        <About />
+      </BioProvider>
     </section>
   );
 };
