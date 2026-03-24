@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import { BioContext } from ".";
+ 
+import { useBioCustomHook } from "./CustomHook";
 
 export const Home = () => {
-  const { myName, myAge } = useContext(BioContext);
+  const { myName, myAge } = useBioCustomHook();
   return (
     <div>
       <h1>🏠 Home Page</h1>
