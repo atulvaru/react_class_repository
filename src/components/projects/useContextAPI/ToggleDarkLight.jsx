@@ -11,8 +11,8 @@ export const ToggleDarkLight = () => {
       duration-300 
       ease-in-out
       ${theme === "dark" 
-        ? "bg-gradient-to-br from-blue-950 via-blue-900 to-gray-900 text-amber-50" 
-        : "bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-900"
+        ? "bg-linear-to-br from-blue-950 via-blue-900 to-gray-900 text-amber-50" 
+        : "bg-linear-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-900"
       }
     `}>
       <div className="container mx-auto px-4 py-16">
@@ -26,8 +26,8 @@ export const ToggleDarkLight = () => {
               tracking-tight 
               animate-fade-in
               ${theme === "dark" 
-                ? "bg-gradient-to-r from-amber-200 to-yellow-200 bg-clip-text text-transparent" 
-                : "bg-gradient-to-r from-blue-800 to-indigo-800 bg-clip-text text-transparent"
+                ? "bg-linear-to-r from-amber-200 to-yellow-200 bg-clip-text text-transparent" 
+                : "bg-linear-to-r from-blue-800 to-indigo-800 bg-clip-text text-transparent"
               }
             `}>
               Welcome

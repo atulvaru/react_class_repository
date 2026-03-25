@@ -21,8 +21,10 @@
  
 // import { Home } from "./components/projects/useContextAPI/Home";
 // import { DarkLight, ThemeHookProvider } from "./components/projects/useContextAPI/Toggle";
-import { ThemeHookProvider } from "./components/projects/useContextAPI/Toggle";
-import { ToggleDarkLight } from "./components/projects/useContextAPI/ToggleDarkLight";
+// import { ThemeHookProvider } from "./components/projects/useContextAPI/Toggle";
+// import { ToggleDarkLight } from "./components/projects/useContextAPI/ToggleDarkLight";
+// import { ReducerExample } from "./components/projects/useReducer";
+import { ProperWay } from "./components/projects/useReducer/properWay";
 
 // import { PropsDrilling } from "./components/PropsDrilling";
 
@@ -82,9 +84,11 @@ const App = () => {
         <Home />
         <About />
       </BioProvider> */}
-      <ThemeHookProvider>
+      {/* <ThemeHookProvider>
         <ToggleDarkLight />
-      </ThemeHookProvider>
+      </ThemeHookProvider> */}
+      {/* <ReducerExample /> */}
+      <ProperWay />
     </section>
   );
 };
