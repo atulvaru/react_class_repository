@@ -16,6 +16,8 @@
 // import { ContactForm } from "./components/projects/useState/ContactForm.jsx";
 // import { LoginReact2 } from "./components/projects/useState/LoginReact2.jsx";
 
+import { ReactMemo } from "./components/projects/ReactMemo/ReactMemo";
+
 // import { BioProvider } from "./components/projects/useContextAPI";
 // import { About } from "./components/projects/useContextAPI/About";
  
@@ -24,7 +26,7 @@
 // import { ThemeHookProvider } from "./components/projects/useContextAPI/Toggle";
 // import { ToggleDarkLight } from "./components/projects/useContextAPI/ToggleDarkLight";
 // import { ReducerExample } from "./components/projects/useReducer";
-import { ProperWay } from "./components/projects/useReducer/properWay";
+// import { ProperWay } from "./components/projects/useReducer/properWay";
 
 // import { PropsDrilling } from "./components/PropsDrilling";
 
@@ -88,7 +90,8 @@ const App = () => {
         <ToggleDarkLight />
       </ThemeHookProvider> */}
       {/* <ReducerExample /> */}
-      <ProperWay />
+      {/* <ProperWay /> */}
+      <ReactMemo />
     </section>
   );
 };

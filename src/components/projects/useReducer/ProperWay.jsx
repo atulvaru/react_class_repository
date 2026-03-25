@@ -21,7 +21,9 @@ export const ProperWay = () => {
         };
       case "RESET":
         return {
-            ...state, count: 0};
+          ...state,
+          count: 0,
+        };
 
       default:
         return state;
@@ -45,7 +47,7 @@ export const ProperWay = () => {
         <div className="flex gap-4 justify-center">
           {/* Decrement Button */}
           <button
-            onClick={() => dispatch({ type: "DECREMENT"  })}
+            onClick={() => dispatch({ type: "DECREMENT" })}
             className={`
               group
               relative
@@ -90,7 +92,7 @@ export const ProperWay = () => {
 
           {/* Increment Button */}
           <button
-            onClick={() => dispatch({ type: "INCREMENT"  })}
+            onClick={() => dispatch({ type: "INCREMENT" })}
             className="
               group
               relative
