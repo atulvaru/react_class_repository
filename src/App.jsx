@@ -16,7 +16,9 @@
 // import { ContactForm } from "./components/projects/useState/ContactForm.jsx";
 // import { LoginReact2 } from "./components/projects/useState/LoginReact2.jsx";
 
-import { ReactMemo } from "./components/projects/ReactMemo/ReactMemo";
+// import { ReactMemo } from "./components/projects/ReactMemo/ReactMemo";
+import UseCallBackFunction from "./components/projects/ReactMemo/UseCallback";
+// import { MemoParentComponent } from "./components/projects/ReactMemo/useMemo";
 
 // import { BioProvider } from "./components/projects/useContextAPI";
 // import { About } from "./components/projects/useContextAPI/About";
@@ -91,7 +93,9 @@ const App = () => {
       </ThemeHookProvider> */}
       {/* <ReducerExample /> */}
       {/* <ProperWay /> */}
-      <ReactMemo />
+      {/* <ReactMemo /> */}
+      {/* <MemoParentComponent /> */}
+      <UseCallBackFunction />
     </section>
   );
 };
